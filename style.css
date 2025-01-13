@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+ 
+  .accordion {
+    max-width: 600px;
+    margin: 50px auto;
+    border-radius: 8px;
+    overflow: hidden; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  }
+  
+ 
+  .accordion-item {
+    border-bottom: 1px solid #ddd; 
+  }
+  
+  
+  .accordion-header {
+    background-color: #2d2d2d;
+    color: white;
+    width: 100%;
+    text-align: left; 
+    padding: 20px;
+    font-size: 18px;
+    cursor: pointer; 
+    border: none;
+    outline: none; 
+    transition: background-color 0.3s ease; 
+  }
+  .accordion-header::after {
+    content: '▼'; 
+    float: right; 
+    transition: transform 0.3s ease; 
+  }
+  
+  .accordion-header:hover {
+    background-color: #444; 
+  }
+  
+ 
+  .accordion-content {
+    max-height: 0; 
+    overflow: hidden; 
+    background-color: #f4f4f4;
+    transition: max-height 0.3s ease; 
+    padding: 0 20px; 
+  }
+  
+  
+  .accordion-content p {
+    padding: 20px 0;
+    font-size: 16px;
+    color: #333; 
+  }
+  
+  
+  .accordion-item.active .accordion-content {
+    max-height: 200px; 
+  }
+  
+  
+  .accordion-content p {
+    opacity: 0; 
+    transform: translateY(-20px); 
+    transition: opacity 0.3s ease, transform 0.3s ease; 
+  }
+  
+  
+  .accordion-item.active .accordion-content p {
+    opacity: 1;
+    transform: translateY(0); 
+  }
+
+
+
+.accordion-header::after {
+    content: '▼'; 
+    float: right; 
+    transition: transform 0.3s ease; 
+  }
+  
+  
+  .accordion-item.active .accordion-header::after {
+    transform: rotate(-180deg); 
+  }
+  
+ 
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #f4f4f4;
+    transition: max-height 0.5s ease, opacity 0.5s ease; 
+    opacity: 0; 
+    padding: 0 20px; 
+  }
+  
+  
+  .accordion-item.active .accordion-content {
+    max-height: 200px; 
+    opacity: 1; 
+  }
+  
+  
+  .accordion-content p {
+    opacity: 0; 
+    transform: translateY(-10px); 
+    transition: opacity 0.5s ease, transform 0.5s ease; 
+  }
+  
+  
+  .accordion-item.active .accordion-content p {
+    opacity: 1;
+    transform: translateY(0); 
+  }
+  
